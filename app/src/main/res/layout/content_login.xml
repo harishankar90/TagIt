@@ -10,6 +10,7 @@
     tools:showIn="@layout/activity_login">
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible">
@@ -19,30 +20,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:text="Login"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.085" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/tv_login"
+            app:layout_constraintVertical_bias="0.322">
 
             <com.rilixtech.CountryCodePicker
                 android:id="@+id/countryCodePicker"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="18dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="18dp"
                 app:ccp_defaultNameCode="IN"
                 app:ccp_enableHint="false"
                 app:ccp_enablePhoneAutoFormatter="true"
@@ -66,6 +68,7 @@
     </android.support.constraint.ConstraintLayout>
     
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_verify"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone">
