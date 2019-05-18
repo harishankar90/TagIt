@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "686467629250",
+    "firebase_url": "https://tagit-f08ba.firebaseio.com",
+    "project_id": "tagit-f08ba",
+    "storage_bucket": "tagit-f08ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686467629250:android:6083ac6287681c66",
+        "android_client_info": {
+          "package_name": "com.hvdcreations.tagit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686467629250-7j56q2m24avq6varbumtk5jn2oi5mv0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hvdcreations.tagit",
+            "certificate_hash": "c443385030b2f0774ec58e0dc598c43b90974e38"
+          }
+        },
+        {
+          "client_id": "686467629250-154u6hf3ti8eh4gkkluf9epaf2vbqd5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvpO1a3BWudaQj5eX_oYyfn-0KPMuANRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686467629250-154u6hf3ti8eh4gkkluf9epaf2vbqd5f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
