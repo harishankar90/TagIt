@@ -33,4 +33,8 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+    implementation 'com.github.joielechong:countrycodepicker:2.1.8'
+    implementation 'com.github.rrsaikat:CircularMorphProgressBarLibrary:0.1.0'
 }
