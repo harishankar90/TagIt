@@ -3,4 +3,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_select_place">SelectPlace</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="loading">Loading...</string>
+    <string name="button_ok">ok</string>
+    <string name="msg_no_internet_connection">No internet connection</string>
 </resources>
