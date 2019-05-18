@@ -24,6 +24,10 @@ allprojects {
     }
 }
 
+ext.libraries = [
+        android_support: 'com.android.support:support-v4:22.1.1'
+]
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
