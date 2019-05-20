@@ -84,6 +84,11 @@ public class VerifyActivtiy extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+
+                    Intent intentR = getIntent();
+                    String name = intentR.getStringExtra("name");
+                    String mail = intentR.getStringExtra("mail");
+
                     Intent intent = new Intent(VerifyActivtiy.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);

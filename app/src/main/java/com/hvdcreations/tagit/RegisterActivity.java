@@ -1,5 +1,6 @@
 package com.hvdcreations.tagit;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,13 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent(RegisterActivity.this,VerifyActivtiy.class);
+                intent.putExtra("name",name);
+                intent.putExtra("mobile",phone);
+                intent.putExtra("mail",mail);
+                startActivity(intent);
+
                 Toast.makeText(RegisterActivity.this, name+phone+mail, Toast.LENGTH_SHORT).show();
             }
         });
