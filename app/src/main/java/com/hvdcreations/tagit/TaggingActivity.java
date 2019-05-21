@@ -107,10 +107,8 @@ public class TaggingActivity extends AppCompatActivity implements OnMapReadyCall
                     myRef.child(number).push().setValue(dataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(TaggingActivity.this, "Successfuly, Tagged !", Toast.LENGTH_SHORT).show();
                             Intent intentF = new Intent(TaggingActivity.this,SucessActivity.class);
                             startActivity(intentF);
-
                         }
                     });
                 }
