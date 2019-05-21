@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
@@ -35,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     Button register;
 
     String code = String.valueOf(91), phone = String.valueOf(0);
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,10 @@ public class LoginActivity extends AppCompatActivity {
                             String number = "+" + code + phone;
                             Intent intent = new Intent(LoginActivity.this,VerifyActivtiy.class);
                             intent.putExtra("mobile",number);
+
+                            sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
+                            sharedPreferences.edit().putString("mobile",number).commit();
+
                             startActivity(intent);
                         }
                     }, 2000);

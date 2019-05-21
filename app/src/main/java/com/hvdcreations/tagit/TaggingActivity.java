@@ -1,6 +1,7 @@
 package com.hvdcreations.tagit;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.support.v7.app.AppCompatActivity;
@@ -39,13 +40,15 @@ public class TaggingActivity extends AppCompatActivity implements OnMapReadyCall
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tagging);
 
+        SharedPreferences myprefs= getSharedPreferences("user", MODE_PRIVATE);
+        String number = myprefs.getString("mobile", null);
+        Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
+
         TVtitle = findViewById(R.id.txt_title);
-        TVdesc = findViewById(R.id.txt_desc);
         TVloc = findViewById(R.id.txt_Location);
         TVadrs = findViewById(R.id.text_adrs);
 
         ETtitle = findViewById(R.id.et_title);
-        ETdesc = findViewById(R.id.et_desc);
 
         saveLoc = findViewById(R.id.btn_save);
 
@@ -69,7 +72,7 @@ public class TaggingActivity extends AppCompatActivity implements OnMapReadyCall
             String postalCode = addresses.get(0).getPostalCode();
 
             TVadrs.setText(address);
-            Toast.makeText(this, address+"/"+city+"/"+country+"/"+postalCode, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, address+"/"+city+"/"+country+"/"+postalCode, Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();

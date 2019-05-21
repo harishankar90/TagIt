@@ -46,7 +46,7 @@ public class VerifyActivtiy extends AppCompatActivity {
 
         fabVerify = findViewById(R.id.fab_verify);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         String mobile = intent.getStringExtra("mobile");
         sendVerificationCode(mobile);
 
@@ -57,6 +57,8 @@ public class VerifyActivtiy extends AppCompatActivity {
 
                 try{
                     if (pin.isEmpty() || pin.length()<6){
+                        Intent intent1 = new Intent(VerifyActivtiy.this,MainActivity.class);
+                        startActivity(intent1);
                         Snackbar.make(v, "Nice Try, Wait for OTP !", Snackbar.LENGTH_LONG).show();
                     }
                     verifyCode(pin);
