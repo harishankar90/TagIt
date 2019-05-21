@@ -19,8 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VerifyActivtiy"/>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".SucessActivity"></activity>
+        <activity android:name=".VerifyActivtiy" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

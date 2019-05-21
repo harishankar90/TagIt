@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -93,26 +94,29 @@ public class TaggingActivity extends AppCompatActivity implements OnMapReadyCall
                 String latitude = lati;
                 String longitude = longi;
 
-                HashMap<String,String> dataMap = new HashMap<String,String>();
-                dataMap.put("title",title);
-                dataMap.put("address",address);
-                dataMap.put("lati",latitude);
-                dataMap.put("longi",longitude);
+                if(title.isEmpty()){
+                    Snackbar.make(v, "Provide a Title to Tag", Snackbar.LENGTH_LONG).show();
+                }else{
+                    HashMap<String,String> dataMap = new HashMap<String,String>();
+                    dataMap.put("title",title);
+                    dataMap.put("address",address);
+                    dataMap.put("lati",latitude);
+                    dataMap.put("longi",longitude);
 
 
-                myRef.child(number).push().setValue(dataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(TaggingActivity.this, "Successfuly, Tagged !", Toast.LENGTH_SHORT).show();
-                        Intent intentF = new Intent(TaggingActivity.this,MainActivity.class);
-                        startActivity(intentF);
+                    myRef.child(number).push().setValue(dataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(TaggingActivity.this, "Successfuly, Tagged !", Toast.LENGTH_SHORT).show();
+                            Intent intentF = new Intent(TaggingActivity.this,SucessActivity.class);
+                            startActivity(intentF);
 
-                    }
-                });
-
-
+                        }
+                    });
+                }
             }
         });
+
 
 
     }
