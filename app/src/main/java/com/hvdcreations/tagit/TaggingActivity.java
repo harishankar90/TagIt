@@ -109,6 +109,7 @@ public class TaggingActivity extends AppCompatActivity implements OnMapReadyCall
                         public void onComplete(@NonNull Task<Void> task) {
                             Intent intentF = new Intent(TaggingActivity.this,SucessActivity.class);
                             startActivity(intentF);
+                            finish();
                         }
                     });
                 }
